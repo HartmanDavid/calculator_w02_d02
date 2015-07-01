@@ -24,6 +24,7 @@ function selectOperator(){ //called by operators
   function clearSquare(){that.style.backgroundColor = '#444';}
   window.setTimeout(clearSquare, 100);
   arrayEquation.push(this.innerHTML);}
+  document.getElementById('display').innerHTML = arrayEquation;
 }
 
 function selectNumber(){ //called by numbers
