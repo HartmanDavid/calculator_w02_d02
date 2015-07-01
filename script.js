@@ -1,5 +1,4 @@
 console.log('hi');
-
 var number = document.querySelectorAll('.number');
 var operator = document.querySelectorAll('.operator');
 var arrayMath=[];
@@ -16,13 +15,15 @@ for (i=0; i<operator.length; i++){ //clicking on a operator
   console.log('yeahhh!');
 }
 function selectOperator(){ //called by operators
-  console.log('operator');
+  if (this.id == 'clear'|| this.id == "equals" || this.id == "dot"){
+     console.log('clear equals dot');
+  }else {console.log('operator');
   combineNumber();
   this.style.backgroundColor = 'pink';
   var that = this;
   function clearSquare(){that.style.backgroundColor = '#444';}
   window.setTimeout(clearSquare, 100);
-  arrayEquation.push(this.innerHTML);
+  arrayEquation.push(this.innerHTML);}
 }
 
 function selectNumber(){ //called by numbers
@@ -34,7 +35,7 @@ function selectNumber(){ //called by numbers
   arrayStorage.push(parseInt(this.innerHTML));
   }
 
-function combineNumber(){
+function combineNumber(){ //combines all indexies of arrayStorage to make a full interger
    for(i=0; i<arrayStorage.length; i++){
    var pow= arrayStorage.length;
    var jimmy= arrayStorage[i]*Math.pow(10,pow-(i+1));
@@ -42,4 +43,5 @@ function combineNumber(){
   }
   arrayEquation.push(colombia);
   arrayStorage= [];
+  colombia =0;
 }
