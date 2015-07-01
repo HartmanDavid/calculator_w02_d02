@@ -1,0 +1,18 @@
+notes on how to calculate the equation for the arrayEquation.
+
+NUMBER = N OPERATOR = O
+
+array => N , O , N , O , N , O , N
+index => 0 , 1 , 2 , 3 , 4 , 5 , 6
+	var arrayOperators = [];
+for (i= 1; i<arrayEquation.length; i=i+2){
+	arrayOperators.push(arrayEquation[i]);
+		}
+if(!!arrayEquation.indexOf('x') || !!arrayEquation.indexOf('/')){
+     if(!!arrayEquation.indexOf('+') || !!arrayEquation.indexOf('-')){
+  console.log('true');};}
+
+	>>>>>> Math to calculate with a Minus equastion>>>>>>
+	if(!!arrayEquation.indexOf('-')){
+var minus = arrayEquation.indexOf('-');
+arrayEquation[(minus-1)] -arrayEquation[(minus+1)];} 
